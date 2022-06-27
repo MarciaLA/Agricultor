@@ -21,7 +21,7 @@ MODELO = {('sin-moneda', 'pedir-moneda', 'moneda'): 'con-moneda',
 
 class AgenteReactivoBasadoModelos:
     
-   def __init__(self, modelo,estado_inicial='', reglas, accion_inicial=''):
+   def __init__(self, modelo, reglas, estado_inicial='', accion_inicial=''):
        #Agente racional de tipo reactivo basado en modelo.
        self.modelo = modelo
        self.reglas = reglas
@@ -33,7 +33,7 @@ class AgenteReactivoBasadoModelos:
 
 
     
-    def actuar(self, percepcion):
+   def actuar(self, percepcion):
         #Actua segun la percepcion, devolviendo una accion
         if not percepcion:
             return self.accion_inicial
